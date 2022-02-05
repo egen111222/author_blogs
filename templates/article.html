@@ -1,0 +1,28 @@
+{% extends 'layout5.html' %}
+{% load static %}
+
+
+{% block menu %}
+	{% include 'menu.html '%}
+{% endblock %}
+
+{% block content %}
+					<div id="main">
+						<div class="inner">
+							<h1>{{article.title}}</h1>
+							<span class="image main"><img src="/{{article.image}}" alt="" /></span>
+							<p>{{article.text}}</p>
+							<h4>Автори статті</h4>
+
+							{% for author in article.author.all %}
+								<a href="/author/{{author.id}}">{{author}}</a>
+							{% endfor %}
+						</div>
+					</div>
+{% endblock %}
+
+
+
+{% block socials %}
+		{% include 'social.html' %}
+{% endblock  %}

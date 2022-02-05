@@ -1,0 +1,54 @@
+{% extends 'layout5.html' %}
+{% load static %}
+
+
+{% block menu %}
+{% include 'menu.html' %}
+{% endblock %}
+
+
+
+
+
+{% block content %}
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Сайт блогу</h1>
+								<p>Опис блогу</p>
+							</header>
+							<section class="tiles">
+
+
+
+
+
+								{% for article in articles %}
+								<article class="style1">
+									<span class="image">
+										<img src="{{article.image}}" alt="" />
+									</span>
+									<a href="/article/{{article.id}}">
+										<h2>{{article.title}}</h2>
+										<div class="content">
+											<p>{{article.text}}</p>
+										</div>
+									</a>
+								</article>
+								{% endfor %}
+
+
+
+
+
+
+							</section>
+						</div>
+					</div>
+{% endblock %}
+
+
+{% block socials %}
+	{% include 'social.html' %}
+{% endblock  %}

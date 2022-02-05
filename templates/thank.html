@@ -1,0 +1,17 @@
+{% extends 'layout5.html' %}
+
+
+{% block content %}
+	<h1 align="center">ДЯКУЄМО ЗА ЗВЕРНЕННЯ !!</h1>
+
+
+{% endblock %}
+
+
+{% block socials %}
+
+		{% for social in socials %}
+			<li><a href="{{social.link}}" class="icon brands style2 {{social.icon}}"><span class="label">{{social.name}}</span></a></li>
+		{% endfor%}
+
+{% endblock %}

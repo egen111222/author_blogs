@@ -1,0 +1,8 @@
+body {
+	background-color: silver;
+}
+
+.block1{
+	background-color: #00ff01;
+	display: inline-block;
+}

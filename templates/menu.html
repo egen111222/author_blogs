@@ -1,0 +1,5 @@
+
+<h1>ЦЕ МЕНЮ</h1>
+{% for item in request.menu %}
+		<li><a href="{{item.link}}">{{item.name}}</a></li>
+{% endfor %}

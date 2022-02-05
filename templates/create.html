@@ -1,0 +1,29 @@
+{% extends 'layout5.html' %}
+
+{% block menu %}
+	{% include 'menu.html' %}
+{% endblock %}
+
+
+{% block content %}
+
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{form.as_table}}
+    {{form.errors}}
+<input type="submit" name="GO">
+</form>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block socials %}
+	{% include 'social.html' %}
+{% endblock  %}
